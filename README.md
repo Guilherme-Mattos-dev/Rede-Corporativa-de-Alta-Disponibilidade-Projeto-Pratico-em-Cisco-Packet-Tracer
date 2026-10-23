@@ -69,8 +69,8 @@ A Alpha Saúde tem 32 funcionários, divididos em Gerência, Desenvolvimento e C
 
 ## Equipe
 
-Guilherme Mattos dos Santos
-Renato Campos Lopes, João Marcos dos Santos Antunes
-Phillipe Santana Gonzaga
-Douglas Gabriel Barboza Freitas 
-e Leonardo Lisboa dos Santos.
+Guilherme Mattos dos Santos. 
+Renato Campos Lopes, João Marcos dos Santos Antunes.
+Phillipe Santana Gonzaga. 
+Douglas Gabriel Barboza Freitas. 
+e Leonardo Lisboa dos Santos. 
