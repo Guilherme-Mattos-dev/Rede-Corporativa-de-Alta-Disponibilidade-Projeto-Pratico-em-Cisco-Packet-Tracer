@@ -19,16 +19,56 @@ vlan 40
 exit
 
 
-Portas de acesso
+Portas de acesso (PCs)
 
-interface range fastEthernet 0/1-8
+Cada switch de acesso usa as portas Fa0/1 a Fa0/10 para PCs, na VLAN do seu setor.
+
+SW-ACESSO-1 (VLAN 10):
+
+interface range fastEthernet 0/1-10
  switchport mode access
  switchport access vlan 10
  spanning-tree portfast
  spanning-tree bpduguard enable
 exit
 
-Nas demais portas de acesso, o número da VLAN deve ser alterado de acordo com o setor.
+SW-ACESSO-2 (VLAN 20):
+
+interface range fastEthernet 0/1-10
+ switchport mode access
+ switchport access vlan 20
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+exit
+
+SW-ACESSO-3 (VLAN 30):
+
+interface range fastEthernet 0/1-10
+ switchport mode access
+ switchport access vlan 30
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+exit
+
+SW-ACESSO-4 (VLAN 30):
+
+interface range fastEthernet 0/1-8
+ switchport mode access
+ switchport access vlan 30
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+exit
+
+
+Portas dos servidores — CORE-1
+
+O SRV-DHCP-DNS está na Fa0/9 e o SRV-APP na Fa0/10. As duas portas precisam estar na VLAN 40; caso contrário, os PCs não alcançam os servidores e o DHCP não funciona.
+
+interface range fastEthernet 0/9-10
+ switchport mode access
+ switchport access vlan 40
+ spanning-tree portfast
+exit
 
 
 EtherChannel / LACP — Grupo 1
